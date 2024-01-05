@@ -8,7 +8,6 @@ class Solution:
                 bucket[count] = [num]
             else:    
                 bucket[count].append(num)    
-        print(bucket)
         for arr in bucket[::-1]:
             if len(arr) !=0:
                 for i in arr:
