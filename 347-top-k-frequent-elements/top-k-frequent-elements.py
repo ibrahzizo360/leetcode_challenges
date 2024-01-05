@@ -1,21 +1,20 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        numsMap = Counter(nums)
         res = []
-        print('numsMap: ', numsMap)
-        curVals = list(numsMap.values())
-        print("curVals: ", curVals)
-        c = 0
-        while c < k:
-            curMax = max(curVals)
-            print("curMax: ", curMax)
-            for key,val in numsMap.items():
-                if val == curMax:
-                    print('key: ', key)
-                    res.append(key)
-                    numsMap.pop(key)
-                    break
-            curVals.remove(curMax)
-            c+=1
-        return res
+        numsMap = Counter(nums)
+        bucket = [[] for i in range(len(nums) +1)]
+        for num, count in numsMap.items():
+            if len(bucket[count]) == 0:
+                bucket[count] = [num]
+            else:    
+                bucket[count].append(num)    
+        print(bucket)
+        for arr in bucket[::-1]:
+            if len(arr) !=0:
+                for i in arr:
+                    res.append(i)
+            if len(res) == k:
+                return res
+
+
         
