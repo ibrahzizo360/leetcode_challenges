@@ -13,11 +13,6 @@ class Solution:
                 col_hash[c].add(board[r][c])  
                 row_hash[r].add(board[r][c])
                 sub_hash[(r//3,c//3)].add(board[r][c])
-
-
-        print(row_hash)    
-        print(col_hash)    
-        print(sub_hash)     
         
         return True
 
