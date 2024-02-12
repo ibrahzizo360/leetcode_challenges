@@ -5,9 +5,7 @@ class Solution:
         j = len(height) - 1
 
         while i < j:
-            length = j - i
-            width = min(height[i], height[j])
-            curArea = length * width
+            curArea = (j - i) * min(height[i], height[j])
             if height[i] < height[j]:
                 waterArea = max(curArea, waterArea)
                 i+=1
