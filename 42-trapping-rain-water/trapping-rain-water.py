@@ -5,8 +5,6 @@ class Solution:
         max_r = 0
         water = 0
 
-        if not height: return 0
-
         while l < r:
             max_l = max(max_l, height[l])
             max_r = max(max_r, height[r])
