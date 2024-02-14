@@ -1,8 +1,8 @@
 class Solution:
     def trap(self, height: List[int]) -> int:
         l , r = 0, len(height) - 1
-        max_l = 0
-        max_r = 0
+        max_l = height[l]
+        max_r = height[r]
         water = 0
 
         while l < r:
