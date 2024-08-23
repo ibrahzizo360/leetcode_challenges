@@ -9,4 +9,6 @@ class Solution(object):
         t = sorted(t)
         if s == t:
             return True
+        else: 
+            return False
         
