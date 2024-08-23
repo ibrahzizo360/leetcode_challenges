@@ -5,9 +5,11 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        hashMap = {}
-        for idx,val in enumerate(nums):
-            diff = target - val
-            if diff in hashMap:
-                return [idx, hashMap[diff]]
-            hashMap[val] = idx    
+        hashmap = defaultdict(int)
+        for i in range(len(nums)):
+            res = target - nums[i]
+            if res in hashmap.values():
+                for k,v in hashmap.items():
+                    if v == res:
+                        return [i, k]
+            hashmap[i] = nums[i]
