@@ -4,11 +4,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        hashmap = defaultdict(int)
+        seen = set()
         for num in nums:
-            if num in hashmap:
+            if num in seen:
                 return True
-            else:
-                hashmap[num] += 1 
+            seen.add(num)
         return False
         
