@@ -4,18 +4,12 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        hashmap = defaultdict(str)
+        hashmap = defaultdict(list)
+        
         for string in strs:
-            sortedString = sorted(string)
-            sortedString = ''.join(sortedString)
-            if sortedString in hashmap:
-                hashmap[sortedString].append(string) 
-            else:
-                hashmap[sortedString] = [string]
-
-        res = []
-        for k,v in hashmap.items():
-            res.append(v)
-        return res
+            sorted_string = ''.join(sorted(string))
+            hashmap[sorted_string].append(string)
+        
+        return list(hashmap.values())
 
         
