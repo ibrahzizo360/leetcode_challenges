@@ -4,7 +4,4 @@ class Solution(object):
         :type celsius: float
         :rtype: List[float]
         """
-        num_to_kelvin = celsius + 273.15
-        num_to_fahrenheit = celsius * 1.80 + 32.00
-        res = [num_to_kelvin, num_to_fahrenheit]
-        return res
+        return [celsius + 273.15, celsius * 1.80 + 32.00]
