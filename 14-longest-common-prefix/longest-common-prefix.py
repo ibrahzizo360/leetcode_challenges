@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: str
         """
         shortest_str = min(strs, key=len)
-        for i in range(len(shortest_str)):
+        for i in range(len(min(strs, key=len))):
             for string in strs:
                 if shortest_str[i] != string[i]:
                     return shortest_str[:i]
