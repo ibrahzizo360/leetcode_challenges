@@ -4,10 +4,6 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        product = n*2
-        if n % n == 0 and n % 2 == 0:
-            return n
-        else:
-            return product
+        return n if n % n == 0 and n % 2 == 0 else n*2
 
         
