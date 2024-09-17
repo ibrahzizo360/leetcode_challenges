@@ -4,6 +4,6 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        return n if n % n == 0 and n % 2 == 0 else n*2
+        return n if n % 2 == 0 else n*2
 
         
