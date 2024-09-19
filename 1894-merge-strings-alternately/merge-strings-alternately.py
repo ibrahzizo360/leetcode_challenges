@@ -8,10 +8,8 @@ class Solution:
             res.append(word2[i])
         res.append(word1[min_length:])
         res.append(word2[min_length:])
-
-        str = ''.join(res)
-        print(str)
-        return str
+        
+        return ''.join(res)
 
         
         
