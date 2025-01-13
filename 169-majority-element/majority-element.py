@@ -1,6 +1,10 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        hashNum = Counter(nums)
-        return [key for key,val in hashNum.items() if max(hashNum.values()) == val][0]
-
+        counter = Counter(nums)
+        res = 0
+        n = len(nums)
+        for k,v in counter.items():
+            if v > n / 2:
+                return k
+        return res
         
