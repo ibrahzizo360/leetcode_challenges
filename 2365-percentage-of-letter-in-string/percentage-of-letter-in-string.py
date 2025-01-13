@@ -6,9 +6,6 @@ class Solution(object):
         :rtype: int
         """
         counter = Counter(s)
-        for k,v in counter.items():
-            if k == letter:
-                return int((v/len(s)) * 100)
-        return 0
-
-        
+        res = counter[letter] / len(s) * 100
+        print(res)
+        return int(res)
