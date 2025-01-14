@@ -6,9 +6,6 @@ class Solution:
             if len(set(s[l:r+1])) == 3:
                 count += 1
             l+=1
-        
-        print(count)
-        print(s[0:2])
         return count
 
         
