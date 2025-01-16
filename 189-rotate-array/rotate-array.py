@@ -11,6 +11,4 @@ class Solution:
         for i in range(len(res)):
             nums[i] = res[i]
 
-        return nums
-
         
