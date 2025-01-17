@@ -3,12 +3,17 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        res = [1] * len(nums)
-        for i in range(len(nums)):
-            pos = (i+k) % len(nums)
-            res[pos] = nums[i]
+        n = len(nums)
+        k = k % n
+        def reverse(l, r):
+            while l < r:
+                nums[l], nums[r] = nums[r], nums[l]
+                l+=1
+                r-=1
+        reverse(0, n-1)
+        reverse(0, k-1)
+        reverse(k, n-1)
+        print(nums)
 
-        for i in range(len(res)):
-            nums[i] = res[i]
 
         
