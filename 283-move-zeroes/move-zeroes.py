@@ -3,14 +3,19 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        non_zero_index = 0  # Pointer to place the next non-zero element
-
-        # Step 1: Move all non-zero elements to the front
-        for i in range(len(nums)):
+        n = len(nums)
+        non_zero = 0
+        zero_count = 0
+        for i in range(n):
             if nums[i] != 0:
-                nums[non_zero_index] = nums[i]
-                non_zero_index += 1
+                nums[non_zero] = nums[i]
+                non_zero += 1
+            else:
+                zero_count += 1
 
-        # Step 2: Fill the remaining elements with 0
-        for i in range(non_zero_index, len(nums)):
+        for i in range(non_zero, n):
             nums[i] = 0
+              
+
+
+        
